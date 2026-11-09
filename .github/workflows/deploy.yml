@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           curl -fL "$(cat src.txt)" -o site.zip
-          mkdir site && cd site && unzip -q ../site.zip && ls -R | head -50
+          mkdir site && cd site && unzip -qo ../site.zip && ls -R | head -50
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
